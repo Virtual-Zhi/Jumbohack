@@ -1,0 +1,277 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fc;
+    /* Light grayish background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #4C6E91, #2a3d56);
+    /* Gradient background */
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.topSection {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    width: 130px;
+    height: 120px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Centering the Sections */
+.template {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem 0;
+}
+
+.countSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+}
+
+.bar-container {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    align-self: center;
+    width: 90%;
+    background-color: rgb(155, 153, 153);
+    border-radius: 5px;
+    overflow: hidden;
+    height: 30px;
+    /* Adjust the height as needed */
+}
+
+.fullness-bar {
+    display: flex;
+    height: 100%;
+    border-radius: 2px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    background-color: green;
+    transition: width 0.5s, background-color 0.5s;
+}
+
+.fullness-bar.empty {
+    background-color: green;
+}
+
+.fullness-bar.half {
+    background-color: rgb(255, 255, 122);
+}
+
+.fullness-bar.full {
+    background-color: red;
+}
+
+.Gym,
+.Dewick,
+.Carm {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Gym:hover,
+.Dewick:hover,
+.Carm:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.Gym-header,
+.Dewick-header,
+.Carm-header {
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.Gym-header {
+    background-image: url("https://cdn.discordapp.com/attachments/1342946905285591103/1342974643308462120/tufts-gym.webp?ex=67bb961a&is=67ba449a&hm=3038c0be88f00331d5ac5b3bb8632ead5a1f00438310b49b7199be5266238629&");
+}
+
+.Dewick-header {
+    background-image: url("https://cdn.discordapp.com/attachments/1342946905285591103/1342978088589332553/dewick.jpg?ex=67bb994f&is=67ba47cf&hm=779e4792a3b1446a78caca50c87ad774a629c3b496cc7355232fd031162423b6&");
+}
+
+.Carm-header {
+    background-image: url("https://cdn.discordapp.com/attachments/1342946905285591103/1342978089004699738/carm.jpg?ex=67bb994f&is=67ba47cf&hm=9bf64aeac4442d75d3919768221b98746a3bb047c9698eecb34d0acaa91ea136&");
+}
+
+button {
+    background-color: #4C6E91;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #2a3d56;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: #4C6E91;
+    color: white;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Form */
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1.1rem;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4C6E91;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #2a3d56;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* Space out the buttons */
+
+}
+
+.nav-title {
+    font-weight: 700;
+    color: #141414;
+    text-decoration: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+    transition: 0.6s;
+    position: absolute;
+    left: 40%;
+}
+
+/* Ensure buttons are positioned on each side */
+.navButton {
+    padding: 15px 30px;
+    margin-left: 10px;
+    border: 2px solid #4C6E91;
+    border-radius: 50px;
+    color: #4C6E91;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.navLoginButton {
+    position: absolute;
+    left: 91%;
+}
+
+/* For navbar buttons' hover effect */
+.navButton:hover {
+    background-color: #4C6E91;
+    color: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1600px) {
+    .nav-title {
+        font-size: 45px;
+        margin-left: 10px;
+        /* Adjust margin for better space */
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .nav-title {
+        font-size: 40px;
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .nav-title {
+        font-size: 35px;
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .navbar {
+        padding: 20px 20px;
+        background-color: white;
+    }
+
+    .nav-title {
+        font-size: 2em;
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-title {
+        font-size: 1.5em;
+        margin-left: 10px;
+    }
+}

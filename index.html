@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="icon"
+        href="https://cdn.discordapp.com/attachments/1342946905285591103/1343002612005601291/JumboTrack.png?ex=67bbb026&is=67ba5ea6&hm=1b67de9cf4f21660a256d51045fa0029a0da74ff30ffa38ef05a693a278e81f0&" />
+    <link rel="stylesheet" href="cStyle.css" />
+    <script type="module" src="./Js/app.js"></script>
+    <script type="module" src="./Js/student_count.js"></script>
+    <title>JumboTrack</title>
+</head>
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <div id="root"></div>
+
+    <!-- Navbar Section -->
+    <div class="navbar" id="title">
+        <a class="nav-title-link" id="title-link">
+            <a class="navButton" href="index.html">
+                <span class="button-text">Home</span>
+            </a>
+            <a class="navButton" href="form.html">
+                <span class="button-text">Form</span>
+            </a>
+            <span class="nav-title">JumboTrack</span>
+            <a class="navButton navLoginButton">
+                <span class="button-text">Login</span>
+            </a>
+        </a>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="topSection">
+            <img alt="title" class="logo"
+                src="https://cdn.discordapp.com/attachments/1342946905285591103/1343002612005601291/JumboTrack.png?ex=67bbb026&is=67ba5ea6&hm=1b67de9cf4f21660a256d51045fa0029a0da74ff30ffa38ef05a693a278e81f0&">
+            <h1>Welcome to JumboTrack</h1>
+        </div>
+    </header>
+
+    <!-- Template Section -->
+    <div class="template">
+        <div class="countSection">
+            <!-- Gym Section -->
+            <div class="Gym">
+                <h1>Flantcher</h1>
+                <div class="Gym-header">
+                </div>
+                <div class="Gym-people">
+                    0 people at the Gym
+                </div>
+                <div class="bar-container">
+                    <div class="gym fullness-bar">
+                    </div>
+                </div>
+                <button class="Gym-learn open-button">Learn More</button>
+
+            </div>
+
+            <!-- Dewick Section -->
+            <div class="Dewick">
+                <h1>Dewick</h1>
+                <div class="Dewick-header">
+                </div>
+                <div class="Dewick-people">
+                    0 people at Dewick
+                </div>
+                <div class="bar-container">
+                    <div class="dewick fullness-bar">
+                    </div>
+                </div>
+
+                <button class="Dewick-learn open-button">Learn More</button>
+            </div>
+
+            <!-- Carmichael Section -->
+            <div class="Carm">
+                <h1>Carmichael</h1>
+                <div class="Carm-header">
+
+                </div>
+                <div class="Carm-people">
+                    0 people at Carmichael
+                </div>
+                <div class="bar-container">
+                    <div class="carm fullness-bar">
+                    </div>
+                </div>
+                <button class="Carm-learn open-button">Learn More</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 JumboTrack All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        var carm_capacity = 350;
+        var dw_capacity = 520;
+        var gym_capacity = 150;
+
+        var carm_people = 300;
+        var dw_people = 200;
+        var gym_people = 100;
+
+        var gym_percent = gym_people / gym_capacity * 100;
+        var dw_percent = dw_people / dw_capacity * 100;
+        var carm_percent = carm_people / carm_capacity * 100;
+
+        const gym_bar = document.querySelector('.gym.fullness-bar');
+        const dw_bar = document.querySelector('.dewick.fullness-bar');
+        const carm_bar = document.querySelector('.carm.fullness-bar');
+
+        if (gym_percent >= 80) {
+            gym_bar.classList.add('full');
+        } else if (gym_percent >= 40) {
+            gym_bar.classList.add('half');
+        } else {
+            gym_bar.classList.add('empty');
+        }
+
+        if (dw_percent >= 80) {
+            dw_bar.classList.add('full');
+        } else if (dw_percent >= 40) {
+            dw_bar.classList.add('half');
+        } else {
+            dw_bar.classList.add('empty');
+        }
+
+        if (carm_percent >= 80) {
+            carm_bar.classList.add('full');
+        } else if (carm_percent >= 40) {
+            carm_bar.classList.add('half');
+        } else {
+            carm_bar.classList.add('empty');
+        }
+
+        gym_bar.style.width = gym_percent + '%'
+        dw_bar.style.width = dw_percent + '%'
+        carm_bar.style.width = carm_percent + '%'
+
+        gym = document.querySelector('.Gym-people');
+        gym.innerHTML = gym_people + ' people at the Gym';
+        dw = document.querySelector('.Dewick-people');
+        dw.innerHTML = dw_people + ' people at Dewick';
+        carm = document.querySelector('.Carm-people');
+        carm.innerHTML = carm_people + ' people at Carmichael';
+    </script>
+
+</body>
+
+</html>
