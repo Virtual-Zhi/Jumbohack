@@ -71,5 +71,5 @@ colleges and universities (e.g. Northeastern University) whose students would be
 
 
 ## Screenshots
-![image alt](https://github.com/yzeng1121/virtual_soundboard/blob/98c043cdfb9a648bfa97f29db5b1fbfb4608fd69/screenshots/web_app.png](https://github.com/Virtual-Zhi/Jumbohack/blob/5d16ca04ead42237ee0a3822e86673ef62967724/homepage.png)
+- Included in the GitHub files.
 
